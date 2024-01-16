@@ -15,11 +15,12 @@ class MINIPROJECT3RD_API UFindPlayer_BTTaskNode : public UBTTaskNode
 	GENERATED_BODY()
 
 public:
-   void UFindPlayer_BTTask();
+    void UFindPlayer_BTTask();
 	
 	UPROPERTY(EditAnywhere)
 	FBlackboardKeySelector PlayerKey;
 
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)override;
 	
 	
 };
